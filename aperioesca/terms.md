@@ -112,13 +112,13 @@ Aperioesca is a personal meal awareness tool, **not a social platform**.
 - The AI may reject non-food images
 
 **Reporting Concerns:**
-If you encounter any issues or have concerns about the App's functionality, contact us at aperioesca@gmail.com.
+If you encounter any issues or have concerns about the App's functionality, contact us at support@ashlunar.dev.
 
 ---
 
 ## 6. Privacy
 
-Your privacy is important to us. Please review our [Privacy Policy](https://hpursan.github.io/aperioesca-legal/privacy.html) to understand how we collect, use, and protect your data.
+Your privacy is important to us. Please review our [Privacy Policy](https://ashlunar.dev/aperioesca/privacy.html) to understand how we collect, use, and protect your data.
 
 **Key points:**
 - Meal data stays on your device
@@ -213,7 +213,7 @@ If any provision of these Terms is found to be invalid or unenforceable, the rem
 
 Questions about these Terms?
 
-**Email:** aperioesca@gmail.com
+**Email:** support@ashlunar.dev
 
 ---
 

@@ -125,11 +125,11 @@ We may update this policy occasionally. Changes will be posted in the app and on
 ## Contact Us
 
 Questions about privacy? Contact us at:
-**Email:** aperioesca@gmail.com
+**Email:** support@ashlunar.dev
 
 ## Related Documents
 
-- **Terms of Service:** [https://hpursan.github.io/aperioesca-legal/terms.html](https://hpursan.github.io/aperioesca-legal/terms.html)
+- **Terms of Service:** [https://ashlunar.dev/aperioesca/terms.html](https://ashlunar.dev/aperioesca/terms.html)
 - **Medical Disclaimer:** See Terms of Service
 
 ## Summary
