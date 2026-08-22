@@ -1,136 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ashlunar - Apps</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ashlunar</title>
+  <link rel="icon" type="image/svg+xml" href="/ashlunar-favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 40px 20px;
-        }
+    :root {
+      --black: #171717;
+      --white: #ffffff;
+      --muted: rgba(255,255,255,0.35);
+      --border: rgba(255,255,255,0.08);
+    }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 60px 40px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-        }
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: 'Inter', system-ui, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
 
-        h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px 40px;
+      max-width: 640px;
+      margin: 0 auto;
+      width: 100%;
+    }
 
-        .tagline {
-            font-size: 1.2em;
-            color: #666;
-            margin-bottom: 40px;
-        }
+    .wordmark {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 48px;
+    }
 
-        h2 {
-            font-size: 1.8em;
-            margin: 40px 0 20px;
-            color: #444;
-        }
+    .tagline {
+      font-size: 28px;
+      font-weight: 500;
+      line-height: 1.35;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
 
-        .apps {
-            list-style: none;
-        }
+    .sub {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 64px;
+    }
 
-        .apps li {
-            margin: 20px 0;
-            padding: 20px;
-            background: #f8f9fa;
-            border-radius: 12px;
-            border-left: 4px solid #667eea;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
+    .tools-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
 
-        .apps li:hover {
-            transform: translateX(5px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
+    .tool-list {
+      list-style: none;
+      border-top: 1px solid var(--border);
+    }
 
-        .apps a {
-            text-decoration: none;
-            color: #667eea;
-            font-weight: 600;
-            font-size: 1.2em;
-        }
+    .tool-list li {
+      border-bottom: 1px solid var(--border);
+    }
 
-        .apps p {
-            color: #666;
-            margin-top: 8px;
-        }
+    .tool-list a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      text-decoration: none;
+      color: var(--white);
+      transition: opacity 0.15s;
+    }
 
-        .contact {
-            margin-top: 40px;
-            padding: 30px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 12px;
-            color: white;
-        }
+    .tool-list a:hover { opacity: 0.65; }
 
-        .contact a {
-            color: white;
-            text-decoration: underline;
-        }
+    .tool-name {
+      font-size: 16px;
+      font-weight: 500;
+    }
 
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            color: #999;
-            font-size: 0.9em;
-        }
-    </style>
+    .tool-desc {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 3px;
+    }
+
+    .tool-arrow {
+      font-size: 14px;
+      color: var(--muted);
+      flex-shrink: 0;
+      margin-left: 16px;
+    }
+
+    footer {
+      padding: 32px 40px;
+      max-width: 640px;
+      margin: 0 auto;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--border);
+    }
+
+    footer p {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    footer a {
+      font-size: 12px;
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    footer a:hover { color: var(--white); }
+  </style>
 </head>
-
 <body>
-    <div class="container">
-        <h1>Ashlunar</h1>
-        <p class="tagline">Building thoughtful, privacy-first mobile experiences.</p>
+  <main>
+    <div class="wordmark">Ashlunar</div>
 
-        <h2>Our Apps</h2>
-        <ul class="apps">
-            <li>
-                <a href="/aperioesca/">Aperioesca</a>
-                <p>The Anti Calorie Tracker - Understanding your meals through energy awareness, not numbers.</p>
-            </li>
-            <li>
-                <a href="/mealplanner/">Meal Planner</a>
-                <p>AI-powered meal planning that adapts to your preferences and dietary needs.</p>
-            </li>
-        </ul>
+    <h1 class="tagline">Tools for decisions<br>that matter.</h1>
+    <p class="sub">Independent tools built to help you understand the numbers behind big life decisions.</p>
 
-        <div class="contact">
-            <h2 style="color: white; margin-top: 0;">Contact</h2>
-            <p>Have questions or feedback? We'd love to hear from you.</p>
-            <p>Email: <a href="mailto:support@ashlunar.dev">support@ashlunar.dev</a></p>
-        </div>
+    <div class="tools-label">Tools</div>
+    <ul class="tool-list">
+      <li>
+        <a href="https://schoolfees.ashlunar.dev" target="_blank" rel="noopener">
+          <div>
+            <div class="tool-name">SA School Fee Planner</div>
+            <div class="tool-desc">Project the full cost of school from Grade R to Matric</div>
+          </div>
+          <span class="tool-arrow">↗</span>
+        </a>
+      </li>
+    </ul>
+  </main>
 
-        <footer>
-            <p>&copy; 2026 Ashlunar. All rights reserved.</p>
-        </footer>
-    </div>
+  <footer>
+    <p>&copy; 2026 Ashlunar</p>
+    <a href="mailto:support@ashlunar.dev">support@ashlunar.dev</a>
+  </footer>
 </body>
-
 </html>
